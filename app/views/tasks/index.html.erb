@@ -1,13 +1,15 @@
 <h1>Tasks</h1>
 
-<% if current_user  %>
+<% if current_user %>
 
-	<% current_user.tasks.each do |t| %>
-
- 	 <p><%= link_to t.task_name, task_path(t.id)  %></p>
+	<% @user.tasks.each do |t| %>
+  
+    <p><%= link_to(t.task_name, task_path(t.id))  %></p>
 
 	<% end %>
   
 <% else %>
-  <p><%= "No Tasks" %></p>
+
+  <p><%= "No Tasks" %></p>  
+  
 <% end %>
