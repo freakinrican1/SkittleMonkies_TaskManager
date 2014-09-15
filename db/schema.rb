@@ -2,7 +2,7 @@
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
-#x`
+#
 # Note that this schema.rb definition is the authoritative source for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140915182058) do
+ActiveRecord::Schema.define(:version => 20140915194731) do
 
   create_table "tasks", :force => true do |t|
     t.string   "task_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20140915182058) do
     t.string   "status"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "email"
   end
 
   create_table "users", :force => true do |t|
