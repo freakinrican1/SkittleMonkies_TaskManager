@@ -8,7 +8,7 @@ class LoginsController < ApplicationController
     
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to login_path
+      redirect_to tasks_path
     else
       raise "Invalid Login."
     end
@@ -16,6 +16,6 @@ class LoginsController < ApplicationController
   
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_to tasks_path
   end
 end
