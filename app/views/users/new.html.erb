@@ -2,7 +2,10 @@
 
 <%= form_for @user, :url => create_user_path do |u| %>
 
-
+  <p>
+    <%= u.label :username %>
+    <%= u.text_field :username %>
+  </p>
   <p>
     <%= u.label :email %>
     <%= u.text_field :email %>
