@@ -1,5 +1,7 @@
 class LoginsController < ApplicationController
   
+  skip_before_filter :authorize
+  
   def new
   end
   
