@@ -2,7 +2,7 @@
 
 <% if current_user %>
 
-	<% @user.tasks.each do |t| %>
+	<% current_user.tasks.each do |t| %>
   
     <p><%= link_to(t.task_name, task_path(t.id))  %></p>
 
