@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     
     if @user.save
-      redirect_to tasks_path
+      redirect_to user_path
     else
       "THIS AINT WORKING!"
     end
