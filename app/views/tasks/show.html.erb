@@ -1,7 +1,7 @@
 <h1><%= @task.task_name %></h1>
 
 <p><%= @task.status %></p>
-<p><%= @task.user_id %></p>
+<p><%= @task.email %></p>
 <p><%= @task.description %>
 
 <%= link_to("Edit this Task", task_edit_path(@task.id)) %>
