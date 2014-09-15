@@ -9,4 +9,7 @@ class CreateTasks < ActiveRecord::Migration
       t.timestamps
     end
   end
+  
+  def 
+  
 end

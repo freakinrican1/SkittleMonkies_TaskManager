@@ -1,7 +1,10 @@
 <h1>Tasks</h1>
 
-<% @tasks.each do |t| %>
+<% if current_user  %>
 
-  <p><%= link_to(t.task_name, task_path(t.id))  %></p>
+	<% current_user.tasks.each do |t| %>
 
+ 	 <p><%= link_to(t.task_name, task_path(t.id))  %></p>
+
+	<% end %>
 <% end %>
