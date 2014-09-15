@@ -6,6 +6,8 @@ TaskManager::Application.routes.draw do
   get "login" => 'logins#new', :as => "login"
   post "login" => 'logins#create', :as => "create_login"
   
+  get "logout" => 'logins#destroy', :as => "logout"
+  
   resources :tasks
 
 end

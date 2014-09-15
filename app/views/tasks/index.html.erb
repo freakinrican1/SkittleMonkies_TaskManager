@@ -7,4 +7,7 @@
  	 <p><%= link_to t.task_name, task_path(t.id)  %></p>
 
 	<% end %>
+  
+<% else %>
+  <p><%= "No Tasks" %></p>
 <% end %>
