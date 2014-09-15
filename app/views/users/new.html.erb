@@ -1,6 +1,6 @@
 <h1>New User</h1>
 
-<%= form_for @user, :url => new_task_path do |u| %>
+<%= form_for @user, :url => create_user_path do |u| %>
 
   <p>
     <%= u.label :email %>
@@ -17,4 +17,5 @@
   <p>
     <%= u.submit %>
   </p>
+  
 <% end %>  
