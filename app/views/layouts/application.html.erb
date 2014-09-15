@@ -15,7 +15,7 @@
 </header>
 
 <body>
-
+<%= session %>
 	<div id="preheader">
 		<% if current_user %>
 		<%= current_user.email %> (<%= link_to "Log out!", logout_path %>)
