@@ -9,13 +9,20 @@
 
 <header>
 	<div id="name">
-		<p><%= link_to("Tasks", tasks_path) %></p>
-		<p><%= link_to("New Task", task_path) %></p>
+		<p><%= link_to "Tasks", tasks_path %></p>
+		<p><%= link_to "New Task", new_task_path %></p>
 	</div>
 </header>
 
 <body>
 
+	<div id="preheader">
+		<% if current_user %>
+		<%= current_user.email %> (<%= link_to "Log out!", logout_path %>)
+		<% else %>
+		<%= link_to("Log In", login_path) %>
+		<% end %>
+	</div>
 
 
 <%= yield %>
