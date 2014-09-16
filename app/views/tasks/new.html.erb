@@ -9,11 +9,11 @@
 	<%= f.label :status %>
 	<%= f.text_field :status %>
 
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
 	<%= f.label :description %>
 	<%= f.text_area :description %>
-  
-  <%= f.label :email %>
-  <%= f.text_area :email %>
 	
 	<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }) %>
 	<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }) %>
