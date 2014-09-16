@@ -8,6 +8,6 @@ TaskManager::Application.routes.draw do
   
   get "logout" => 'logins#destroy', :as => "logout"
   
-  resources :tasks
+  resources :tasks, :projects
 
 end
