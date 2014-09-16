@@ -2,29 +2,50 @@
 <html>
 <head>
   <title>TaskManager</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
-<header>
-	<div id="name">
-		<p><%= link_to "Tasks", tasks_path %></p>
-		<p><%= link_to "New Task", new_task_path %></p>
-	</div>
-</header>
-
+<div id="container">
 <body>
-	<div id="preheader">
-		<% if current_user %>
-		<%= current_user.username %> (<%= link_to "Log out!", logout_path %>)
-		<% else %>
-		<%= link_to("Log In", login_path) %>
-		<% end %>
+	
+	<h1>Skittle Monkey Task Manager</h1>
+	
+	<header>
+	    <% if flash[:notice] %>
+	      <p id="notice"><%= flash[:notice] %></p>
+	    <% end %>
+	    <% if flash[:alert] %>
+	      <p id="alert"><%= flash[:alert] %></p>
+	    <% end %>
+		
+		<div id="login">
+			<% if current_user %>
+			<p><%= current_user.username %> (<%= link_to "Log out!", logout_path %>)</p>
+			<% else %>
+			<p><%= link_to("Log In", login_path) %></p>
+			<% end %>
+		</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><%= link_to "Tasks", tasks_path %></li>
+			<li><%= link_to "New Task", new_task_path %></li>
+			<li><%= link_to "Projects", projects_path %></li>
+			<li><%= link_to "New Project", new_project_path %></li>
+			<li><%= link_to("Signup", signup_path) %></li>
+		</ul>
+	</nav>	
+	
+	<div id="content">
+		<div class="subtitle">
+			<article>
+			</article>
+		</div>
 	</div>
-<%= link_to("Signup", signup_path) %>
-
 <%= yield %>
-
+	</div>
 </body>
 </html>
