@@ -8,17 +8,18 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @projects = Project.where(:user_id => current_user.id)
+    @categories = Category.where(:user_id => current_user.id)
   end
 
   def create
-    @task = Task.new(params[:task])
+    @task = Task.create(params[:task])
     @task.user_id = current_user.id
-
-    if @task.save
-      redirect_to tasks_path
-    else
-      render "new"
-    end
+    @category = Category.find(params[:category_id]) 
+    @project = Project.find(params[:project_id])
+    # @task.category << @category
+   #  @task.project << @project
+    redirect_to tasks_path
   end
 
   def show
@@ -27,16 +28,13 @@ class TasksController < ApplicationController
   end
 
   def edit
-
-    @category = Category.find_by_user_id(session[:user_id])
-
-    @task = Task.find(params[:id])
+    @task = Task.new
+    @projects = Project.where(:user_id => current_user.id)
+    @categories = Category.where(:user_id => current_user.id)
   end
 
   def update
-
     @task = Task.find(params[:id])
-    
     if @task.update_attributes(params[:task])
       redirect_to tasks_path
     else
