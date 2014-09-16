@@ -13,22 +13,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params[:task])
+    @task = Task.create(params[:task])
     @task.user_id = current_user.id
-    
-    if @category.nil?
-      
-    else
-      @category = Category.find_by_user_id(session[:user_id])
-      cat_id = @category.id
-      task_id = @task.id
-      @cat_task = CategoriesTasks.create(:category_id => cat_id, :task_id => task_id)    
-    end
-    if @task.save
-      redirect_to tasks_path
-    else
-      render "new"
-    end
+    @category = Category.find(params[:category_id]) 
+    @project = Project.find(params[:project_id])
+    # @task.category << @category
+   #  @task.project << @project
+    redirect_to tasks_path
   end
 
   def show
