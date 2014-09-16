@@ -8,6 +8,14 @@
 </head>
 
 <header>
+  
+  <% if flash[:notice] %>
+    <p id="notice"><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:alert] %>
+    <p id="alert"><%= flash[:alert] %></p>
+  <% end %>
+  
 	<div id="name">
 		<p><%= link_to "Tasks", tasks_path %></p>
 		<p><%= link_to "New Task", new_task_path %></p>
@@ -17,6 +25,8 @@
 </header>
 
 <body>
+
+  
 	<div id="preheader">
 		<% if current_user %>
 		<%= current_user.username %> (<%= link_to "Log out!", logout_path %>)

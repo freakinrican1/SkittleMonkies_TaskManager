@@ -13,7 +13,10 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to tasks_path
     else
-      "THIS AINT WORKING!"
+      redirect_to signup_path, :alert => "Signup Error"
+  
+  
+     
     end
   end
 end
