@@ -10,6 +10,7 @@ TaskManager::Application.routes.draw do
   
   get "add_category" => 'categories#new', :as => "add_category"
   post "create_category" => 'categories#create', :as => "create_category"
+  put "update" => 'categories#create', :as => "update"
   
   resources :tasks
 

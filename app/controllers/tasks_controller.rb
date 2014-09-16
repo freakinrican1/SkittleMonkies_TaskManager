@@ -22,15 +22,21 @@ class TasksController < ApplicationController
   end
 
   def show
-     @task = Task.find(params[:id])
+    @category = Category.find_by_user_id(session[:user_id])
+    @task = Task.find(params[:id])
   end
 
   def edit
+
+    @category = Category.find_by_user_id(session[:user_id])
+
     @task = Task.find(params[:id])
   end
 
   def update
+
     @task = Task.find(params[:id])
+    
     if @task.update_attributes(params[:task])
       redirect_to tasks_path
     else

@@ -3,6 +3,8 @@
 <p><%= @task.status %></p>
 <p><%= @task.email %></p>
 <p><%= @task.description %>
+  
+<p><%= @category.name %></p>
 
 <%= link_to "Edit this Task", edit_task_path(@task.id) %>
 <%= link_to "Create new category", add_category_path %>
