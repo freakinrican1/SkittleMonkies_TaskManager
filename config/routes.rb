@@ -13,5 +13,6 @@ TaskManager::Application.routes.draw do
   put "update" => 'categories#create', :as => "update"
   
   resources :tasks
+  resources :tasks, :projects
 
 end
