@@ -16,3 +16,9 @@
 
 <% end %>
 
+<%= form_for @category, :url => update_path do |c| %>
+  <%= c.label @category.name %>
+  <%= c.check_box :name %>
+  
+  <%= c.submit %>
+<% end %>
