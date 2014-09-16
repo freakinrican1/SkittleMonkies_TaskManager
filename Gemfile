@@ -7,6 +7,7 @@ gem 'rails', '3.2.19'
 
 gem 'pg'
 gem 'pry-rails', :group => :development
+gem 'pony', '~> 1.11'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,3 +37,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+# Pony.mail(:to => 'you@example.com', :from => 'me@example.com', :subject => 'hi', :body => 'Hello there.')

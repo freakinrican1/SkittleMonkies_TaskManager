@@ -1,5 +1,7 @@
 TaskManager::Application.routes.draw do
 
+
+  get "email" => 'users#email', :as => "email"
   get "signup" => 'users#new', :as => "signup"
   post "create_user" => 'users#create', :as => "create_user"
   

@@ -56,6 +56,8 @@ GEM
     multi_json (1.10.1)
     pg (0.17.1)
     polyglot (0.3.5)
+    pony (1.11)
+      mail (>= 2.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -116,6 +118,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   pg
+  pony (~> 1.11)
   pry-rails
   rails (= 3.2.19)
   sass-rails (~> 3.2.3)

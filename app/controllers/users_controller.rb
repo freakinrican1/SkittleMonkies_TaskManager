@@ -13,10 +13,11 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to tasks_path
     else
-      redirect_to signup_path, :alert => "Signup Error"
-  
-  
-     
+      redirect_to signup_path, :alert => "Signup Error"  
     end
+  end
+  
+  def email
+
   end
 end
