@@ -24,6 +24,9 @@ class ProjectsController < ApplicationController
 
     def show
       @project = Project.find(params[:id])
+      # if @project.tasks != nil
+#         @tasks = @project.tasks
+#       end
     end
 
     def edit
