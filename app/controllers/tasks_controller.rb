@@ -7,13 +7,23 @@ class TasksController < ApplicationController
   end
 
   def new
+    @category = Category.find_by_user_id(session[:user_id])
     @task = Task.new
   end
 
   def create
     @task = Task.new(params[:task])
     @task.user_id = current_user.id
-
+    
+    if @category.nil?
+      
+    else
+      @category = Category.find_by_user_id(session[:user_id])
+      cat_id = @category.id
+      task_id = @task.id
+      binding.pry
+      @cat_task = CategoriesTasks.create(:category_id => cat_id, :task_id => task_id)    
+    end
     if @task.save
       redirect_to tasks_path
     else
