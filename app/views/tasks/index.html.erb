@@ -13,3 +13,14 @@
   <p><%= "No Tasks" %></p>  
   
 <% end %>
+
+
+<%= link_to("Create Category", add_category_path) %>
+<% if current_user %>
+
+  <%= current_user.categories.each do |c| %>
+    <p>
+      <%= c.name %>
+    </p>
+  <% end %>  
+<% end %>

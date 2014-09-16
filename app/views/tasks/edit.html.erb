@@ -16,3 +16,11 @@
 
 <% end %>
 
+<h2>Assign Category</h2>
+
+<%= form_for @category, :url => update_path do |c| %>
+  <%= c.label @category.name %>
+  <%= c.check_box :name %>
+  
+  <%= c.submit %>
+<% end %>
