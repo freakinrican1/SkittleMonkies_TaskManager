@@ -1,0 +1,11 @@
+<h1>Add Category</h1>
+
+<%= form_for @category, :url => create_category_path do |c| %>
+
+  <p>
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+  </p>
+  
+  <%= c.submit %>
+<% end %>

@@ -13,3 +13,12 @@
   <p><%= "No Tasks" %></p>  
   
 <% end %>
+
+<% if current_user %>
+
+  <%= current_user.categories.each do |c| %>
+    <p>
+      <%= c.name %>
+    </p>
+  <% end %>  
+<% end %>

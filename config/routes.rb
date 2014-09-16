@@ -8,6 +8,9 @@ TaskManager::Application.routes.draw do
   
   get "logout" => 'logins#destroy', :as => "logout"
   
+  get "add_category" => 'categories#new', :as => "add_category"
+  post "create_category" => 'categories#create', :as => "create_category"
+  
   resources :tasks
 
 end
