@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
     skip_before_filter :authorize, :only => [:index, :show]
   
     def index
-      @projects = Project.all
+      @projects = Project.where(:user_id => current_user.id)
     end
 
     def new
@@ -13,9 +13,10 @@ class ProjectsController < ApplicationController
     def create
       @project = Project.new(params[:project])
       @project.username = current_user.username
+      @project.user_id = current_user.id
 
       if @project.save
-        redirect_to tasks_path
+        redirect_to projects_path
       else
         render "new"
       end
@@ -32,7 +33,7 @@ class ProjectsController < ApplicationController
     def update
       @project = Project.find(params[:id])
       if @project.update_attributes(params[:project])
-        redirect_to tasks_path
+        redirect_to projects_path
       else
         render "edit"
       end
