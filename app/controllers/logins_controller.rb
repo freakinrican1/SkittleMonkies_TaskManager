@@ -12,7 +12,7 @@ class LoginsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to tasks_path
     else
-      raise "Invalid Login."
+      redirect_to login_path, :alert => "Invalid Login"
     end
   end
   

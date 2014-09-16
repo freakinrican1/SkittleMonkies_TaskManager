@@ -10,6 +10,4 @@ class CreateTasks < ActiveRecord::Migration
     end
   end
   
-  def 
-  
 end
