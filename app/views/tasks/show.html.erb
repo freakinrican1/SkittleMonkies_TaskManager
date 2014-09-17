@@ -1,4 +1,4 @@
-<h2><%= @task.task_name %></h2>
+<h1><%= @task.task_name %></h1>
 <p>Task Category: 
   <% if @task.category.nil? %>
     <%= "No category assigned" %>
@@ -23,6 +23,12 @@
 
 
 
+<h2>Comments</h2>
+<% @user_comments.each do |u| %>
+  <p><%= u.user.username %>  Wrote: <%= u.content %></p>
+<% end %>
+
+
 <h3>Leave a Comment</h3>
 
 <%= form_for @comment, :url => create_comment_path(@task.id) do |c| %>
@@ -33,6 +39,4 @@
 <% end %>
 
 
-<% @user_comments.each do |u| %>
-  <p><%= u.content %></p>
-<% end %>
+

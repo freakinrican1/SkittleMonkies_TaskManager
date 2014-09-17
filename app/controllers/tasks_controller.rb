@@ -49,7 +49,7 @@ class TasksController < ApplicationController
     @category = Category.find_by_user_id(session[:user_id])
     @task = Task.find(params[:id])
     @comment = Comment.new
-    @user_comments = Comment.where(task_id: @task.id )
+    @user_comments = Comment.where(task_id: @task.id)
   end
 
   def edit
