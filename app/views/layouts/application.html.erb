@@ -7,10 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 
-<div id="container">
 <body>
-
-	<h1>Skittle Monkey Task Manager</h1>
+	
+	<div id="logo">
+		<h1>Skittle Monkey Task Manager</h1>
+	</div>
 	
 	<header>
 	    <% if flash[:notice] %>
@@ -29,23 +30,15 @@
 		</div>
 	</header>
 	
-	<nav>
-		<ul>
-			<li><%= link_to "Tasks", tasks_path %></li>
-			<li><%= link_to "New Task", new_task_path %></li>
-			<li><%= link_to "Projects", projects_path %></li>
-			<li><%= link_to "New Project", new_project_path %></li>
-			<li><%= link_to("Signup", signup_path) %></li>
-		</ul>
-	</nav>	
-	
+	<ul id="nav">
+		<li><%= link_to "Tasks", tasks_path %></li>
+		<li><%= link_to "Projects", projects_path %></li>
+		<li><%= link_to("Signup", signup_path) %></li>
+	</ul>
+
 	<div id="content">
-		<div class="subtitle">
-			<article>
-			</article>
-		</div>
+
 	</div>
 <%= yield %>
-	</div>
 </body>
 </html>

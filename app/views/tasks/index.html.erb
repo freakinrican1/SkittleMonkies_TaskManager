@@ -1,10 +1,13 @@
-<h2>Tasks</h2>
+<div id="subhead">
+	<h2>Tasks</h2>
+</div>
 
+<div id="feature">
 <% if current_user %>
 
 	<% current_user.tasks.each do |t| %>
   
-    <p><%= link_to(t.task_name, task_path(t.id))  %></p>
+    <h4><%= link_to(t.task_name, task_path(t.id))  %></h4>
 	<!-- <p>Category:<%# t.category %>, Project:<%# t.project %>, <%# t.status %></p> -->
 
 	<% end %>
@@ -15,5 +18,7 @@
   
 <% end %>
 
-
+<%= link_to("New Task", new_task_path) %>
 <%= link_to("Create Category", add_category_path) %>
+
+</div>

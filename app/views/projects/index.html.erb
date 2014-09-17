@@ -1,6 +1,11 @@
+<div id="subhead">
+	<h2>Projects</h2>
+</div>
+
+<div id="feature">
 <% if current_user %>
 
-    <h1><%= current_user.username.capitalize %>'s Projects</h1>
+    <h4><%= current_user.username.capitalize %>'s Projects</h4>
 
 	<% @projects.each do |p| %>
   
@@ -13,3 +18,7 @@
   <p><%= "No Projects" %></p>
   
 <% end %>
+
+<%= link_to("Create New Project", new_project_path) %>
+
+</div>
