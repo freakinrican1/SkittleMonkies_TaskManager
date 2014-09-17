@@ -2,7 +2,7 @@
 
 html {
 	z-index: -1;
-	background-color: #343838;
+	background-color: #E0E0E0 ;
   box-sizing: border-box;
 }
 
@@ -67,7 +67,7 @@ h1 {
 #subhead {
   font-family: 'Syncopate', sans-serif;
 	width: 75%;
-	background-color: #005F6B;
+	background-color: #008C9E;
 	float: right;
 	border-radius: 20px 0px 0px 20px;
 	height: 75px;
@@ -79,7 +79,7 @@ h1 {
 #feature {
 	width: 75%;
 	min-height: 300px;
-	background-color: #005F6B;
+	background-color: #008C9E;
 	float: right;
 	border-radius: 20px 0px 0px 20px;
 	margin-top: 10px;
