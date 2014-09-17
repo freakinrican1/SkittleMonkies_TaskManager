@@ -26,4 +26,5 @@ TaskManager::Application.routes.draw do
   match "delete_project/:title " => 'projects#destroy', :as => "delete_project"
   
   resources :tasks
+
 end
