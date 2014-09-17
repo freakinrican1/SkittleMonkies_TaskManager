@@ -17,6 +17,10 @@ class TasksController < ApplicationController
     @task.project_id = (params[:project_id]).to_i
     @task.category_id = (params[:category_id]).to_i
     @task.email = current_user.email
+<<<<<<< HEAD
+=======
+    @task.save
+>>>>>>> be116a0870d73e6560cf8fadf64736f4f19a0bb3
     if @task.save
       if @task.email == ""
         puts "NOT WORKING"
