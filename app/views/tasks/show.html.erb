@@ -1,9 +1,21 @@
 <h2><%= @task.task_name %></h2>
-<p>Task Category: <%= @task.category %></p>
+<p>Task Category: 
+  <% if @task.category.nil? %>
+    <%= "No category assigned" %>
+  <% else %>
+    <%= @task.category.name %>
+  <% end %>
+</p>
 <p>Status: <%= @task.status %></p>
 <p>Email Sent To: <%= @task.email %></p>
 <p>Description: <%= @task.description %></p>
-<p>Project Title: <%= @task.project %></p>
+<p>Project Title: 
+  <% if @task.project.nil? %>
+    <%= "No project assigned" %>
+  <% else %>
+    <%= @task.project.title %>
+  <% end %>
+</p>
 
 
 <%= link_to "Edit this Task", edit_task_path(@task.id) %>
