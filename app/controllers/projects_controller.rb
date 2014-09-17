@@ -23,16 +23,15 @@ class ProjectsController < ApplicationController
     end
 
     def show
-      @project = Project.find(params[:id])
-      # @tasks = @project.tasks
+      @project = Project.where(:title => params[:title])[0]
     end
 
     def edit
-      @project = Project.find(params[:id])
+      @project = Project.where(:title => params[:title])[0]
     end
 
     def update
-      @project = Project.find(params[:id])
+      @project = Project.where(:title => params[:title])[0]
       if @project.update_attributes(params[:project])
         redirect_to projects_path
       else

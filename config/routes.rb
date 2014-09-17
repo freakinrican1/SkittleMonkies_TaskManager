@@ -16,8 +16,14 @@ TaskManager::Application.routes.draw do
   
   get "add_comment" => 'comments#new', :as => "new_comment"
   post "create_comment/:task_id" => 'comments#create', :as => "create_comment"
+
+  match "project/:title" => 'projects#show', :as => "project"
+  match "projects" => 'projects#index', :as => "projects"
+  get "new_project" => 'projects#new', :as => "new_project"
+  match "edit_project/:title" => 'projects#edit', :as => "edit_project"
+  post "create_project" => 'projects#create', :as => "create_project"
+  match "update_project/" => 'projects#update', :as => "update_project"
+  match "delete_project/:title " => 'projects#destroy', :as => "delete_project"
   
   resources :tasks
-  resources :projects
-
 end

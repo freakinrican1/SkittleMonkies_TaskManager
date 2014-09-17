@@ -1,5 +1,11 @@
 <h1><%= @project.title %></h1>
-<p><%= @project.description %></p>
+<h2><%= @project.description %></h2>
+<% if @tasks != nil %>
+	<p>Tasks Associated with this Project:</p>
+	<% @tasks.each do |t| %>
+	<p><%= link_to(t.task_name, task_path(t.id))  %></p>
+	<% end %>
+<% end %>
 
-<%= link_to "Edit this Project", edit_project_path(@project.id) %>
+<%= link_to "Edit this Project", edit_project_path(@project.title) %>
 <%= link_to "Create new tasks for this project", new_task_path %>
