@@ -4,7 +4,22 @@
 <p><%= @task.email %></p>
 <p><%= @task.description %>
   
-<p><%= @category.name %></p>
 
 <%= link_to "Edit this Task", edit_task_path(@task.id) %>
 <%= link_to "Create new category", add_category_path %>
+
+
+
+<h3>Leave a Comment</h3>
+
+<%= form_for @comment, :url => create_comment_path(@task.id) do |c| %>
+  <%= c.label :content %>
+  <%= c.text_area :content %>
+  
+  <%= c.submit %>
+<% end %>
+
+
+<% @user_comments.each do |u| %>
+  <p><%= u.content %></p>
+<% end %>

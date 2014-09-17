@@ -16,8 +16,8 @@ class TasksController < ApplicationController
     @task = Task.create(params[:task])
     binding.pry
     @task.user_id = current_user.id
-    @category = Category.find(params[:category_id]) 
-    @project = Project.find(params[:project_id])
+    # @category = Category.find(params[:category_id])
+    # @project = Project.find(params[:project_id])
     # @task.category << @category
     # @task.project << @project
 
@@ -51,6 +51,8 @@ class TasksController < ApplicationController
   def show
     @category = Category.find_by_user_id(session[:user_id])
     @task = Task.find(params[:id])
+    @comment = Comment.new
+    @user_comments = Comment.where(task_id: @task.id )
   end
 
   def edit

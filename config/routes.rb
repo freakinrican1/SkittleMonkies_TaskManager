@@ -14,7 +14,10 @@ TaskManager::Application.routes.draw do
   post "create_category" => 'categories#create', :as => "create_category"
   put "update" => 'categories#create', :as => "update"
   
+  get "add_comment" => 'comments#new', :as => "new_comment"
+  post "create_comment/:task_id" => 'comments#create', :as => "create_comment"
+  
   resources :tasks
-  resources :tasks, :projects
+  resources :projects
 
 end

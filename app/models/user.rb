@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :tasks
   has_many :projects
   has_many :categories
+  has_many :comments
   
   validates :username, presence: true, uniqueness: true
   validates :email,  presence: true, uniqueness: true
