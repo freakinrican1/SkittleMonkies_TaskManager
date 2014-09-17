@@ -1,45 +1,71 @@
 
+
+html {
+	z-index: -1;
+	background-color: #343838;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 header {
+  font-family: 'Cuprum', sans-serif;
 	height: 40px;
 	width: 20%;
+  margin: -60px 0 0 0 ;
 	text-align: center;
-	margin: -84px auto 0 1010px;
-	background-color: #005F6B;
+	float: right;
 	border-radius: 20px 0px 0px 20px;
 	padding-right: 10px;
 	background-color: white;
-	border-style: solid;
-	padding-left: 10px;
 	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-bottom: 10px;
+  
 }
 
 h1 {
+  font-family: 'Syncopate', sans-serif;
 	background-color: #008C9E;
 	width: 100%;
 	height: 128px;
 	padding-top: 10px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+#login {
+  margin: 0 0 0 30px;
 }
 
 #nav {
 	border-radius: 20px 20px 20px 20px;
 	background-color: #005F6B;
 	width: 95%;
-	height: 20px;
-	padding-top: 20px;
+	height: 50px;
+  text-align: center;
 	background-color: white;
 	margin: 20px auto 20px auto;
+  padding: 0;
+}
+ #nav ul {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 20px;
 }
 
 #nav li {
+  font-family: 'Syncopate', sans-serif;
 	display: inline;
-	margin: 10%;
-	border-radius: 20px 20px 20px 20px;
-	height: 50px;
-	width: 25px;
+  margin-left: 80px;
+  margin-right: 80px;
+	width: 10px;
+ 
 }
 
 #subhead {
+  font-family: 'Syncopate', sans-serif;
 	width: 75%;
 	background-color: #005F6B;
 	float: right;
@@ -47,13 +73,12 @@ h1 {
 	height: 75px;
 	margin-top: 20px;
 	text-align: center;
-	border-style: solid;
 	margin-bottom: 10px;
 }
 
 #feature {
 	width: 75%;
-	height: 100%;
+	min-height: 300px;
 	background-color: #005F6B;
 	float: right;
 	border-radius: 20px 0px 0px 20px;
@@ -63,13 +88,19 @@ h1 {
 	display: inline;
 }
 
-#feature h4 {
+#feature li{
+  font-family: 'Syncopate', sans-serif;
+   list-style-type: none;
+  font-size: 30px;
 	text-align: left;
+  padding: 20px;
 	margin-left: 80px
 }
 
 #feature a {
-	margin: 20px
+  font-family: 'Cuprum', sans-serif;
+	margin: 20px;
+  padding: 10px
 }
 
 #leftColumn {
@@ -105,7 +136,7 @@ h1 {
 }
 
 a:link {
-	color: deeppink;
+	color: white;
 	text-decoration: none;
 }
 
@@ -114,10 +145,10 @@ a:visited {
 }
 
 a:hover {
-	color: deeppink;
+	color: red;
 	text-decoration: underline;
 }
 
 a:active {
-	color: darkcyan;
+	color: white;
 }

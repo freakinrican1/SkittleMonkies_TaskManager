@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'> 
 <head>
   <title>TaskManager</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
@@ -9,11 +11,13 @@
 
 <body>
 	
-	<div id="logo">
-		<h1>Skittle Monkey Task Manager</h1>
-	</div>
+  	<div id="logo">
+  		<h1>Skittle Monkey Task Manager</h1>
+  	</div>
 	
 	<header>
+  
+    
 	    <% if flash[:notice] %>
 	      <p id="notice"><%= flash[:notice] %></p>
 	    <% end %>
@@ -29,12 +33,15 @@
 			<% end %>
 		</div>
 	</header>
+  
+  <div id="nav">
 	
-	<ul id="nav">
+	<ul>
 		<li><%= link_to "Tasks", tasks_path %></li>
 		<li><%= link_to "Projects", projects_path %></li>
 		<li><%= link_to("Signup", signup_path) %></li>
 	</ul>
+</div>
 
 	<div id="content">
 
