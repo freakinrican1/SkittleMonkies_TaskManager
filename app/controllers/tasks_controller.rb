@@ -14,12 +14,14 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(params[:task])
-    @task.user_id = current_user.id
-    @category = Category.find(params[:category_id]) 
-    @project = Project.find(params[:project_id])
-    # @task.category << @category
-   #  @task.project << @project
-    redirect_to tasks_path
+    @task.project_id = (params[:project_id])
+    @task.category_id = (params[:category_id])
+    @task.email = current_user.email
+    if @task.save
+      redirect_to tasks_path
+    else
+      render "new"
+    end
   end
 
   def show

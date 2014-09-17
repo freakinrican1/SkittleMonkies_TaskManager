@@ -5,6 +5,7 @@
 	<% current_user.tasks.each do |t| %>
   
     <p><%= link_to(t.task_name, task_path(t.id))  %></p>
+	<!-- <p>Category:<%# t.category %>, Project:<%# t.project %>, <%# t.status %></p> -->
 
 	<% end %>
   
@@ -16,11 +17,3 @@
 
 
 <%= link_to("Create Category", add_category_path) %>
-<% if current_user %>
-
-  <%= current_user.categories.each do |c| %>
-    <p>
-      <%= c.name %>
-    </p>
-  <% end %>  
-<% end %>

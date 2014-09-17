@@ -1,10 +1,11 @@
 <h2><%= @task.task_name %></h2>
-
-<p><%= @task.status %></p>
-<p><%= @task.email %></p>
-<p><%= @task.description %>
+<p>Task Category: <%= @task.category %></p>
+<p>Status: <%= @task.status %></p>
+<p>Email Sent To: <%= @task.email %></p>
+<p>Description: <%= @task.description %></p>
+<p>Project Title: <%= @task.project %></p>
   
-<p><%= @category.name %></p>
+
 
 <%= link_to "Edit this Task", edit_task_path(@task.id) %>
 <%= link_to "Create new category", add_category_path %>

@@ -12,7 +12,14 @@ TaskManager::Application.routes.draw do
   post "create_category" => 'categories#create', :as => "create_category"
   put "update" => 'categories#create', :as => "update"
   
+  match "project/:title" => 'projects#show', :as => "project"
+  match "projects" => 'projects#index', :as => "projects"
+  match "new_project" => 'projects#new'
+  match "edit_project/:title" => 'projects#edit'
+  match "create_project/:title" => 'projects#create'
+  match "update_project/:title" => 'projects#update'
+  match "delete_project/:title " => 'projects#destroy'
+  
   resources :tasks
-  resources :tasks, :projects
-
+  
 end
