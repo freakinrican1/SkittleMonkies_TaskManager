@@ -14,10 +14,10 @@ TaskManager::Application.routes.draw do
   
   match "project/:title" => 'projects#show', :as => "project"
   match "projects" => 'projects#index', :as => "projects"
-  match "new_project" => 'projects#new', :as => "new_project"
+  get "new_project" => 'projects#new', :as => "new_project"
   match "edit_project/:title" => 'projects#edit', :as => "edit_project"
-  match "create_project/:title" => 'projects#create', :as => "create_project"
-  match "update_project/:title" => 'projects#update', :as => "update_project"
+  post "create_project" => 'projects#create', :as => "create_project"
+  match "update_project/" => 'projects#update', :as => "update_project"
   match "delete_project/:title " => 'projects#destroy', :as => "delete_project"
   
   resources :tasks

@@ -13,10 +13,12 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(params[:task])
-    @task.project_id = (params[:project_id])
-    @task.category_id = (params[:category_id])
+    binding.pry
+    @task = Task.new(params[:task])
+    @task.project_id = (params[:project_id]).to_i
+    @task.category_id = (params[:category_id]).to_i
     @task.email = current_user.email
+    @task.save
     if @task.save
       redirect_to tasks_path
     else
@@ -37,6 +39,8 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
+    @task.project_id = (params[:project_id]).to_i
+    @task.category_id = (params[:category_id]).to_i
     if @task.update_attributes(params[:task])
       redirect_to tasks_path
     else
