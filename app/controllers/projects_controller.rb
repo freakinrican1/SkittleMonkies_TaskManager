@@ -22,10 +22,12 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.where(:title => params[:title])[0]
+    @project = Project.find_by_title(params[:title])
+    binding.pry
   end
 
   def edit
+    binding.pry
     @project = Project.where(:title => params[:title])[0]
   end
 
