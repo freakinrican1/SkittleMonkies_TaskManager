@@ -15,6 +15,17 @@
   	<div id="logo">
       <h1 id = "headlogo">Skittle Monkey Task Manager</h1>
       <h1>Skittle Monkey Task Manager</h1>
+      
+        <div id="nav">
+	
+      	<ul>
+      	<li>Home</li>
+        <li>About</li>
+      		<li><%= link_to("Signup", signup_path) %></li>
+          <li>Contact</li>
+      	</ul>
+      </div>
+      
   	</div>
 	
 	<header>
@@ -27,23 +38,16 @@
         <p id="alert"><%= flash[:alert] %></p>
       <% end %> -->
 		
-		<div id="login">
-			<% if current_user %>
-			<p><%= current_user.username %> (<%= link_to "Log out!", logout_path %>)</p>
-			<% else %>
-			<p><%= link_to("Log In", login_path) %></p>
-			<% end %>
-		</div>
+	  <!-- <div id="login">
+      <% if current_user %>
+      <p><%= current_user.username %> (<%= link_to "Log out!", logout_path %>)</p>
+      <% else %>
+      <p><%= link_to("Log In", login_path) %></p>
+      <% end %>
+    </div> -->
 	</header>
   
-  <div id="nav">
-	
-	<ul>
-		<li><%= link_to "Tasks", tasks_path %></li>
-		<li><%= link_to "Projects", projects_path %></li>
-		<li><%= link_to("Signup", signup_path) %></li>
-	</ul>
-</div>
+  
 
 	<div id="content">
 

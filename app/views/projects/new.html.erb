@@ -1,16 +1,31 @@
-<h1>New Project</h1>
+
+<div id= 'leftColumn'>
+  <ul>
+  <li><%= link_to("New Task", new_task_path) %></li>
+  <li><%= link_to("Create Category", add_category_path) %></li>
+	<li><%= link_to "Tasks", tasks_path %></li>
+	<li><%= link_to "Projects", projects_path %></li>
+  
+  <ul>
+</div>
+
+<div id = 'feature'>
+<h2>New Project</h2>
 
 
 <%= form_for @project, :url => create_project_path do |f| %>
 
 	<%= f.label :title %>
 	<%= f.text_field :title %>
+  <p>
 
 	<%= f.label :description %>
 	<%= f.text_area :description %>
-	
-	<%= f.submit %>
+	<p>
+	<%= f.submit "Create Project", :class => "submit" %>
 
 <% end %>
 
 <%= link_to "Create new tasks for this project", new_task_path %>
+
+</div>
