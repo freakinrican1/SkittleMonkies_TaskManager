@@ -1,0 +1,8 @@
+<meta http-equiv="refresh" content="5" />
+
+<% @activities.each do |activity| %>
+  <div class="activity">
+    <%= activity.owner.username if activity.owner %>
+    <%= render_activity activity %>
+  </div>
+<% end %>

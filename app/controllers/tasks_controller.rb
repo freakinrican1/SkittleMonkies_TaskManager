@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-  
   skip_before_filter :authorize, :only => [:index, :show]
   
   def index
@@ -19,6 +18,7 @@ class TasksController < ApplicationController
     @task.user_id = current_user.id
     @task.email = current_user.email
     if @task.save
+      @task.create_activity :create, owner: current_user
       if @task.email == ""
         puts "NOT WORKING"
       else        

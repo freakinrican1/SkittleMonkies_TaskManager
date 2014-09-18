@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include PublicActivity::StoreController
 
   before_filter :authorize
   
@@ -15,6 +16,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def index
+    @activities = PublicActivity::Activity.all
+  end
+  
   helper_method :current_user
+  hide_action :current_user
 end
 
