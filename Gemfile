@@ -8,6 +8,7 @@ gem 'rails', '3.2.19'
 gem 'pg'
 gem 'pry-rails', :group => :development
 gem 'pony', '~> 1.11'
+gem 'public_activity'
 
 # Gems used only for assets and not required
 # in production environments by default.

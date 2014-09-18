@@ -1,0 +1,7 @@
+added a project
+
+<% if activity.trackable %>
+  <%= link_to activity.trackable.title, activity.trackable(@project) %>
+<% else %>
+  which has been removed
+<% end %>
