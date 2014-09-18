@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'> 
+<link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 <head>
   <title>TaskManager</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
@@ -12,18 +13,19 @@
 <body>
 	
   	<div id="logo">
-  		<h1>Skittle Monkey Task Manager</h1>
+      <h1 id = "headlogo">Skittle Monkey Task Manager</h1>
+      <h1>Skittle Monkey Task Manager</h1>
   	</div>
 	
 	<header>
   
     
-	    <% if flash[:notice] %>
-	      <p id="notice"><%= flash[:notice] %></p>
-	    <% end %>
-	    <% if flash[:alert] %>
-	      <p id="alert"><%= flash[:alert] %></p>
-	    <% end %>
+	    <!-- <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
+      <% end %> -->
 		
 		<div id="login">
 			<% if current_user %>

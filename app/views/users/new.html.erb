@@ -1,28 +1,37 @@
+<div id = 'signup'>
+  
+  
+  
 <h2>New User</h2>
 
 <%= form_for @user, :url => create_user_path do |u| %>
 
   <p>
-    <%= u.label :username %>
-    <%= u.text_field :username %>
+    <%= u.text_field :username, :placeholder => "Username" %>
   </p>
   <p>
-    <%= u.label :email %>
-    <%= u.text_field :email %>
+    <%= u.text_field :email, :placeholder => "Email" %>
   </p>
   <p>  
-    <%= u.label :password %>
-    <%= u.password_field :password %>
+    <%= u.password_field :password, :placeholder => "Password" %>
   </p>
   <p>
-    <%= u.label :password_confirmation %>
-    <%= u.password_field :password_confirmation %>
+    <%= u.password_field :password_confirmation, :placeholder => "Confirm Password" %>
   </p>
   <p>
-    <%= u.submit %>
+    <br>
+    <%= u.submit "Signup", :class => 'submit' %>
   </p>
   
-    
+
+    <% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
+  </div>
+</div>
 <% end %>
   
   
