@@ -1,9 +1,8 @@
-<div id="subhead">
-	<h2><%= current_user.username.capitalize %>'s Tasks</h2>
+<div id= 'leftColumn'>
 </div>
 
 <div id="feature">
-
+<h2><%= current_user.username.capitalize %>'s Tasks</h2>
 
 <% if current_user %>
 
@@ -31,7 +30,10 @@
   
 <% end %>
 
+<div id ="featureaction">
 <%= link_to("New Task", new_task_path) %>
+
 <%= link_to("Create Category", add_category_path) %>
+</div>
 
 </div>

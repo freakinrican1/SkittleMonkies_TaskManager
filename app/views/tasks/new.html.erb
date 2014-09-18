@@ -1,24 +1,27 @@
+<div id= 'leftColumn'>
+</div>
+
+<div id = 'feature'>
 <h2>New Task</h2>
 
 
 <%= form_for @task do |f| %>
+<p>
+	<%= f.text_field :task_name, :placeholder => "Task Name"  %>
+<p>
 
-	<%= f.label :task_name %>
-	<%= f.text_field :task_name %>
+	<%= f.text_field :status, :placeholder => "Status"  %>
+<p>
+ 
+  <%= f.text_field :email, :placeholder => "Email"  %>
+<p>
 
-	<%= f.label :status %>
-	<%= f.text_field :status %>
-
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	
-	<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }) %>
-	<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }) %>
-
-	<%= f.submit %>
+	<%= f.text_area :description, :placeholder => "Description"  %>
+<p>
+	<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }. insert(0, "Select a Service")) %>
+	<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }. insert(0, "Select a Service"))%>
+<p>
+	<%= f.submit "Make Task", :class => 'submit' %>
 
 <% end %>
-
+</div>
