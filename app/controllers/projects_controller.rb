@@ -2,13 +2,16 @@ class ProjectsController < ApplicationController
   
   skip_before_filter :authorize, :only => [:index, :show]
   def index
-    @projects = Project.where(:user_id => current_user.id)
+    if current_user.nil?
+      redirect_to signup_path, :alert => "You need to log in to do that."
+    else
+      @projects = Project.where(:user_id => current_user.id)
+    end
   end
 
   def new
     @project = Project.new
   end
-
   def create
     @project = Project.new(params[:project])
     @project.username = current_user.username
@@ -23,11 +26,9 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by_title(params[:title])
-    binding.pry
   end
 
   def edit
-    binding.pry
     @project = Project.where(:title => params[:title])[0]
   end
 

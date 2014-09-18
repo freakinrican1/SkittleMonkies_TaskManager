@@ -2,7 +2,25 @@ class TasksController < ApplicationController
   skip_before_filter :authorize, :only => [:index, :show]
   
   def index
-    @tasks = Task.all
+    if current_user.nil?
+      redirect_to signup_path, :alert => "You need to log in to do that."
+    else
+      @tasks = current_user.tasks
+      @categories = current_user.categories
+    end
+    # @list = {}
+    # @categories.each do |x|
+    #   @list[x.id] = []
+    # end
+    # @tasks.each do |task|
+    #   if task.category_id.nil?
+    #     binding.pry
+    #     @list["Uncategorized"] << task
+    #   else
+    #     binding.pry
+    #     @list[task.category_id] << task
+    #   end
+    # end
   end
 
   def new
@@ -50,6 +68,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @comment = Comment.new
     @user_comments = Comment.where(task_id: @task.id)
+
   end
 
   def edit

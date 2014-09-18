@@ -2,11 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include PublicActivity::StoreController
 
-  before_filter :authorize
+  skip_before_filter :authorize
   
   def authorize
     if current_user.nil?
-      redirect_to tasks_path, :alert => "You need to log in to do that."
+      redirect_to signup_path, :alert => "You need to log in to do that."
     end
   end
   

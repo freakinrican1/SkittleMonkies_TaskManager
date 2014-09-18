@@ -11,9 +11,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     
     if @user.save
+      session[:user_id] = @user.id
       redirect_to tasks_path
     else
-      redirect_to signup_path, :alert => "Signup Error"  
+      redirect_to signup_path, :alert => "Signup Error"
     end
   end
   

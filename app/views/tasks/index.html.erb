@@ -8,15 +8,13 @@
 
 
 <ul class="sortable">
+
 	<% current_user.tasks.each do |t| %>
-  
-  
+
   
     <li><%= link_to(t.task_name, task_path(t.id))  %></li>
-	<!-- <p>Category:<%# t.category %>, Project:<%# t.project %>, <%# t.status %></p> -->
-  
-
-<% end %>
+    
+  <% end %>
 </ul>
 <script src="jquery.sortable.min.js"></script>
 <script>
@@ -29,9 +27,8 @@
 <% end %>
 
 <div id ="featureaction">
-<%= link_to("New Task", new_task_path) %>
-
-<%= link_to("Create Category", add_category_path) %>
+  <%= link_to("New Task", new_task_path) %>
+  <%= link_to("Create Category", add_category_path) %>
 </div>
 
 </div>
