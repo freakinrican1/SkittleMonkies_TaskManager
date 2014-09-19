@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-
+<<<<<<< HEAD
   
+=======
+>>>>>>> b0b2dd2c3f425dbaab5c6c0ac3cb9885dd275b9a
   skip_before_filter :authorize
   
   def new
@@ -8,8 +10,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:user])
-    
+    @user = User.new(params[:user])    
     if @user.save
       session[:user_id] = @user.id
       redirect_to tasks_path
@@ -19,6 +20,6 @@ class UsersController < ApplicationController
   end
   
   def email
-
   end
+  
 end

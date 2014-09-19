@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   
   skip_before_filter :authorize, :only => [:index, :show]
+  
   def index
     if current_user.nil?
       redirect_to signup_path, :alert => "You need to log in to do that."
@@ -12,6 +13,7 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
   end
+  
   def create
     @project = Project.new(params[:project])
     @project.username = current_user.username
@@ -40,4 +42,5 @@ class ProjectsController < ApplicationController
       render "edit"
     end
   end
+  
 end
