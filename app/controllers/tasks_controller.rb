@@ -35,10 +35,8 @@ class TasksController < ApplicationController
     @task.project_id = (params[:project_id]).to_i
     @task.category_id = (params[:category_id]).to_i
     @task.user_id = current_user.id
-<<<<<<< HEAD
-=======
     @user = current_user.email
->>>>>>> b0b2dd2c3f425dbaab5c6c0ac3cb9885dd275b9a
+    
     if @task.save
       @task.create_activity :create, owner: current_user
       @task.send_email(@user)
