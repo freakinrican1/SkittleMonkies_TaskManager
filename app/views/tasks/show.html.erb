@@ -1,28 +1,42 @@
-<h1><%= @task.task_name %></h1>
-<p>Task Category: 
+<div id= 'leftColumn'>
+  <ul>
+  <li><%= link_to("New Task", new_task_path) %></li>
+  <li><%= link_to("Create Category", add_category_path) %></li>
+	<li><%= link_to "Tasks", tasks_path %></li>
+	<li><%= link_to "Projects", projects_path %></li>
+  
+</ul>
+</div>
+
+<div id = 'feature'>
+<h2><%= @task.task_name %></h2>
+<ul>
+<li><strong>Task Category:</strong> 
   <% if @task.category.nil? %>
     <%= "No category assigned" %>
   <% else %>
     <%= @task.category.name %>
   <% end %>
-</p>
-<p>Status: <%= @task.status %></p>
-<p>Email Sent To: <%= @task.email %></p>
-<p>Description: <%= @task.description %></p>
-<p>Project Title: 
+</li>
+<li><strong>Status</strong>: <%= @task.status %></li>
+<li><strong>Email Sent To:</strong> <%= @task.email %></li>
+<li><strong>Description:</strong> <%= @task.description %></li>
+<li><strong>Project Title:</strong> 
   <% if @task.project.nil? %>
     <%= "No project assigned" %>
   <% else %>
     <%= @task.project.title %>
   <% end %>
-</p>
+</li>
 
 
 <%= link_to "Edit this Task", edit_task_path(@task.id) %>
 <%= link_to "Create new category", add_category_path %>
 
 
-
+<br>
+<br>
+<br>
 <h2>Comments</h2>
 <% @user_comments.each do |u| %>
   <p><%= u.user.username %>  Wrote: <%= u.content %></p>
@@ -32,11 +46,12 @@
 <h3>Leave a Comment</h3>
 
 <%= form_for @comment, :url => create_comment_path(@task.id) do |c| %>
-  <%= c.label :content %>
-  <%= c.text_area :content %>
-  
-  <%= c.submit %>
+  <%= c.text_area :content, :placeholder => "Write your comment here duh!" %>
+ <br>
+ <br>
+  <%= c.submit "Leave Comment", :class=> 'submit' %>
+
 <% end %>
 
 
-
+</div>
