@@ -34,29 +34,10 @@ class TasksController < ApplicationController
     @task.project_id = (params[:project_id]).to_i
     @task.category_id = (params[:category_id]).to_i
     @task.user_id = current_user.id
-    @task.email = current_user.email
+    @user = current_user.email
     if @task.save
       @task.create_activity :create, owner: current_user
-      if @task.email == ""
-        puts "NOT WORKING"
-      else        
-        Pony.mail({
-          :to => "#{@task.email}",
-          :via => :smtp,
-          :subject => "#{current_user.email}" + "has assigned you a task",
-          :body => "Your task is " + "#{@task.description}",
-          :via_options => {
-            :address              => 'smtp.gmail.com',
-            :port                 => '587',
-            :enable_starttls_auto => true,
-            :user_name            => 'skittlemonkey2000',
-            :password             => 'tastetherainbow',
-            :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-            :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
-        
-            }
-          })
-        end
+      @task.send_email(@user)
       redirect_to tasks_path
     else
       render "new"
