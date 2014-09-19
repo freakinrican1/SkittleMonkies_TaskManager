@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-  
-=======
->>>>>>> b0b2dd2c3f425dbaab5c6c0ac3cb9885dd275b9a
   skip_before_filter :authorize
   
   def new
