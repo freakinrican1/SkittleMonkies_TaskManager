@@ -159,6 +159,15 @@ margin: 0 0 0 30px;
   font-family: 'Francois One', sans-serif;
   opacity:.7;
   margin:0 auto;
+  color:#00A0B0;
+  text-align: left;
+}
+
+#feature h3{
+  font-family: 'Francois One', sans-serif;
+  font-size: 12px;
+  opacity:.7;
+  margin:0 auto;
   color:#AAAAAA;
   text-align: left;
 }
@@ -166,10 +175,10 @@ margin: 0 0 0 30px;
 #feature li{
   font-family: 'Cuprum', sans-serif;
   list-style-type: none;
-  font-size: 24px;
+  font-size: 20px;
   text-align: left;
   padding: 20px;
-  margin-left: 80px
+  margin-left: 50px
 }
 
 #feature a:hover {
@@ -267,9 +276,9 @@ a:visited {
 }
 
 a:hover {
-  color: #E8E8E8;
+  color: #00A0B0;
   text-decoration: none;
-}
+} 
 
 a:active {
   color: white;
