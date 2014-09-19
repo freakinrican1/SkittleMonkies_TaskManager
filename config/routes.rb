@@ -25,8 +25,8 @@ TaskManager::Application.routes.draw do
   post "create_project" => 'projects#create', :as => "create_project"
   match "update_project/" => 'projects#update', :as => "update_project"
   match "delete_project/:title " => 'projects#destroy', :as => "delete_project"
-  
-  
+    
   resources :tasks
   resources :activities
+  
 end

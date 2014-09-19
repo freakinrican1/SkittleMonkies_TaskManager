@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  
   skip_before_filter :authorize, :only => [:index, :show]
   
   def index
@@ -68,7 +69,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @comment = Comment.new
     @user_comments = Comment.where(task_id: @task.id)
-
   end
 
   def edit
@@ -87,4 +87,5 @@ class TasksController < ApplicationController
       render "edit"
     end
   end
+  
 end

@@ -22,5 +22,6 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_user
   hide_action :current_user
+  
 end
 
