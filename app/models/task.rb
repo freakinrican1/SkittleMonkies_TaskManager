@@ -8,8 +8,6 @@ class Task < ActiveRecord::Base
   belongs_to :category  
   has_many :comments
   
-<<<<<<< HEAD
-=======
   def send_email(current_user)
     if self.email == ""
       puts "Email field was empty"
@@ -32,5 +30,5 @@ class Task < ActiveRecord::Base
         })
       end
   end
->>>>>>> b0b2dd2c3f425dbaab5c6c0ac3cb9885dd275b9a
+
 end
