@@ -10,7 +10,6 @@ class CommentsController < ApplicationController
     @task = Task.find(params[:task_id])
     @comment.user_id = @user.id
     @comment.task_id = @task.id
-    binding.pry
     if @comment.save
       redirect_to task_path(@task.id)
     else

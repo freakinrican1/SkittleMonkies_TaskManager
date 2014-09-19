@@ -1,4 +1,15 @@
-<h1>Add Category</h1>
+<div id= 'leftColumn'>
+  <ul>
+  <li><%= link_to("New Task", new_task_path) %></li>
+  <li><%= link_to("Create Category", add_category_path) %></li>
+	<li><%= link_to "Tasks", tasks_path %></li>
+	<li><%= link_to "Projects", projects_path %></li>
+  
+  <ul>
+</div>
+
+<div id = 'feature'>
+<h2>Add Category</h2>
 
 <%= form_for @category, :url => create_category_path do |c| %>
 
@@ -7,5 +18,7 @@
     <%= c.text_field :name %>
   </p>
   
-  <%= c.submit %>
+  <%= c.submit "Make catagory", :class => 'submit' %>
 <% end %>
+
+</div>

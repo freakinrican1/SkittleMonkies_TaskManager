@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'> 
+<link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 <head>
   <title>TaskManager</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
@@ -12,36 +13,41 @@
 <body>
 	
   	<div id="logo">
-  		<h1>Skittle Monkey Task Manager</h1>
+      <h1 id = "headlogo">Skittle Monkey Task Manager</h1>
+      <h1>Skittle Monkey Task Manager</h1>
+      
+        <div id="nav">
+	
+      	<ul>
+      	<li>Home</li>
+        <li>About</li>
+      		<li><%= link_to("Signup", signup_path) %></li>
+          <li>Contact</li>
+      	</ul>
+      </div>
+      
   	</div>
 	
 	<header>
   
     
-	    <% if flash[:notice] %>
-	      <p id="notice"><%= flash[:notice] %></p>
-	    <% end %>
-	    <% if flash[:alert] %>
-	      <p id="alert"><%= flash[:alert] %></p>
-	    <% end %>
+	    <!-- <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
+      <% end %> -->
 		
-		<div id="login">
-			<% if current_user %>
-			<p><%= current_user.username %> (<%= link_to "Log out!", logout_path %>)</p>
-			<% else %>
-			<p><%= link_to("Log In", login_path) %></p>
-			<% end %>
-		</div>
+	  <!-- <div id="login">
+      <% if current_user %>
+      <p><%= current_user.username %> (<%= link_to "Log out!", logout_path %>)</p>
+      <% else %>
+      <p><%= link_to("Log In", login_path) %></p>
+      <% end %>
+    </div> -->
 	</header>
   
-  <div id="nav">
-	
-	<ul>
-		<li><%= link_to "Tasks", tasks_path %></li>
-		<li><%= link_to "Projects", projects_path %></li>
-		<li><%= link_to("Signup", signup_path) %></li>
-	</ul>
-</div>
+  
 
 	<div id="content">
 
