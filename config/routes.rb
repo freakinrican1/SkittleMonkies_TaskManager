@@ -1,6 +1,6 @@
 TaskManager::Application.routes.draw do
 
-  root to: 'activities#index'
+  root to: 'tasks#index'
 
   get "email" => 'users#email', :as => "email"
   get "signup" => 'users#new', :as => "signup"
