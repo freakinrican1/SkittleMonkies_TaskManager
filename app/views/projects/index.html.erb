@@ -1,10 +1,16 @@
-<div id="subhead">
-	<h2>Projects</h2>
+<div id= 'leftColumn'>
+  <ul>
+  <li><%= link_to("New Task", new_task_path) %></li>
+  <li><%= link_to("Create Category", add_category_path) %></li>
+	<li><%= link_to "Tasks", tasks_path %></li>
+	<li><%= link_to "Projects", projects_path %></li>
+  
+  <ul>
 </div>
 
 <div id="feature">
   
-<h4><%= current_user.username.capitalize %>'s Projects</h4>
+<h2><%= current_user.username.capitalize %>'s Projects</h2>
 <% if @projects.nil? %>
 
   <p><%= "No Projects" %></p>
@@ -12,13 +18,14 @@
 <% else %>
 
 	<% @projects.each do |p| %>
-  
-    <p><%= link_to(p.title, project_path(p.title))  %></p>
-
+  <ul>
+    <li><%= link_to(p.title, project_path(p.title))  %></li>
+</ul>
 	<% end %>
   
 <% end %>
 
+<p>
 <%= link_to("Create New Project", new_project_path) %>
-
+</p>
 </div>

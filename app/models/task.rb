@@ -16,7 +16,7 @@ class Task < ActiveRecord::Base
         :to          => "#{self.email}",
         :via         => :smtp,
         :subject     => "#{current_user}" + "has assigned you a task",
-        :body        => "Your task is " + "#{self.description}",
+        :body        => "Your task is " + "#{self.description}. Check it out at http://skittlemonkey-taskmanager.herokuapp.com/!",
         :via_options => {
           :address              => 'smtp.gmail.com',
           :port                 => '587',
