@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   
   def create
     @category = Category.new(params[:category])
-    @category.user_id = current_user.id    
+    @category.user_id = current_user.id
     if @category.save
       redirect_to tasks_path
     else
@@ -19,7 +19,6 @@ class CategoriesController < ApplicationController
     @category = Category.find_by_user_id(session[:user_id])
     cat_id = @category.id
     task_id = @task.id
-    @cat_task = CategoriesTasks.create(:category_id => cat_id, :task_id => task_id)    
+    @cat_task = CategoriesTasks.create(:category_id => cat_id, :task_id => task_id)
   end
-  
 end

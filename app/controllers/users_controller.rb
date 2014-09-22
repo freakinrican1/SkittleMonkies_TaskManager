@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:user])    
+    @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
       redirect_to tasks_path
@@ -16,6 +16,6 @@ class UsersController < ApplicationController
   end
   
   def email
+    
   end
-  
 end

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  
   include PublicActivity::StoreController
 
   skip_before_filter :authorize
@@ -22,6 +23,5 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_user
   hide_action :current_user
-  
 end
 

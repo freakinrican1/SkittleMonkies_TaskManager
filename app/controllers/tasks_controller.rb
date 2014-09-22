@@ -68,6 +68,5 @@ class TasksController < ApplicationController
     else
       render "edit"
     end
-  end
-  
+  end  
 end
