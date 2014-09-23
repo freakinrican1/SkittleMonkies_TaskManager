@@ -11195,3 +11195,811 @@ Content-Transfer-Encoding: 7bit
     <p>Thanks for joining and have a great day!</p>
   </body>
 </html>
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2014-09-23 10:41:31 -0500
+Connecting to database specified by database.yml
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (17.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (15.8ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = 1[0m
+  Rendered tasks/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 449.2ms (Views: 220.0ms | ActiveRecord: 63.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /comments.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /global.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /activities.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /logins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /users.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /logins.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /comments.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /activities.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:33 -0500
+Served asset /categories.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.7ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = 1[0m
+  Rendered tasks/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 83.7ms (Views: 52.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /activities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /activities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:41:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Processing by LoginsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Processing by TasksController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13.5ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /activities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /activities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:18 -0500
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started POST "/create_user" for 127.0.0.1 at 2014-09-23 10:45:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWiX++H+Qzap4fHkwFjY81SD5+Y86GacHFcR1GHQRyc=", "user"=>{"username"=>"Natest", "email"=>"skittlemonkey2000@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[35m (36.9ms)[0m  BEGIN
+  [1m[36mUser Exists (32.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'Natest' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'skittlemonkey2000@gmail.com' LIMIT 1
+  [1m[36mSQL (72.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 23 Sep 2014 15:45:36 UTC +00:00], ["email", "skittlemonkey2000@gmail.com"], ["password_digest", "$2a$10$2SJ4fA/5bbJKpOCpHlduWu6Cw550mPzOhtDfOj4vyKNmaolUTUUru"], ["updated_at", Tue, 23 Sep 2014 15:45:36 UTC +00:00], ["username", "Natest"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered user_mailer/test_email.html.erb (0.8ms)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 346.4ms (ActiveRecord: 142.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = 7
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16.1ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /activities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:45:36 -0500
+Served asset /activities.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-09-23 10:48:16 -0500
+Connecting to database specified by database.yml
+Processing by LoginsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 10:48:16 -0500
+Processing by TasksController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-23 10:48:16 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 77.1ms (Views: 56.4ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /activities.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /global.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /categories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /logins.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /projects.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /tasks.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /categories.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /comments.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /logins.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /activities.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:17 -0500
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started POST "/create_user" for 127.0.0.1 at 2014-09-23 10:48:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWiX++H+Qzap4fHkwFjY81SD5+Y86GacHFcR1GHQRyc=", "user"=>{"username"=>"HIYA", "email"=>"skittlemonkey2000@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."username" = 'HIYA' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'skittlemonkey2000@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 23 Sep 2014 15:48:37 UTC +00:00], ["email", "skittlemonkey2000@gmail.com"], ["password_digest", "$2a$10$bzJMCd7vYj5aGgRWFjX6VuY4b95SFvZvfHm3e6rjeqR6YkdbQWACK"], ["updated_at", Tue, 23 Sep 2014 15:48:37 UTC +00:00], ["username", "HIYA"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/test_email.html.erb (0.8ms)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 117.0ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-09-23 10:48:37 -0500
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = 8[0m
+  Rendered tasks/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 34.3ms (Views: 18.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /activities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /activities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:48:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (2.9ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2064.2ms)
+Date: Tue, 23 Sep 2014 10:57:33 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <5421986d2da40_5bc03fdeb0865be0103fc@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-09-23 11:11:14 -0500
+Connecting to database specified by database.yml
+Processing by LoginsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1.4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 11:11:14 -0500
+Processing by TasksController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 58.1ms (Views: 42.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /activities.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /categories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /logins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /application.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /projects.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /activities.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /categories.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /logins.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /projects.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:15 -0500
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started POST "/create_user" for 127.0.0.1 at 2014-09-23 11:11:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWiX++H+Qzap4fHkwFjY81SD5+Y86GacHFcR1GHQRyc=", "user"=>{"username"=>"HIYA", "email"=>"skittlemonkey2000@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (2.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."username" = 'HIYA' LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'skittlemonkey2000@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 23 Sep 2014 16:11:32 UTC +00:00], ["email", "skittlemonkey2000@gmail.com"], ["password_digest", "$2a$10$HRVxLhv/oKdR5yi13r5j6uk7L7fwpbZRC5Am45n3iNm3MN55Ecwk2"], ["updated_at", Tue, 23 Sep 2014 16:11:32 UTC +00:00], ["username", "HIYA"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/test_email.html.erb (0.9ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2062.5ms)
+Date: Tue, 23 Sep 2014 11:11:32 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <54219bb41a182_78fa3fcca2065a0079622@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 2228.0ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = 9[0m
+  Rendered tasks/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 35.8ms (Views: 18.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /activities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /activities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 11:11:34 -0500
+Served asset /application.js - 304 Not Modified (0ms)
