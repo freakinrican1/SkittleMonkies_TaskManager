@@ -15,13 +15,8 @@ class Task < ActiveRecord::Base
       Pony.mail({
         :to          => "#{self.email}",
         :via         => :smtp,
-<<<<<<< HEAD
-        :subject     => "#{current_user}" + " has assigned you a task.",
-        :body        => "Your task is " + "#{self.description}. Check it out at http://skittlemonkey-taskmanager.herokuapp.com/",
-=======
         :subject     => "#{current_user}" + "has assigned you a task",
         :body        => "Your task is " + "#{self.description}. Check it out at http://skittlemonkey-taskmanager.herokuapp.com/!",
->>>>>>> 984e1cc1505ffe6d5633ddbb810ace3f48ee2fb8
         :via_options => {
           :address              => 'smtp.gmail.com',
           :port                 => '587',

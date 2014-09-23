@@ -10523,3 +10523,30 @@ Content-Transfer-Encoding: 7bit
     <p>Thanks for joining and have a great day!</p>
   </body>
 </html>
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-09-23 10:11:19 -0500
+Connecting to database specified by database.yml
+
+SyntaxError (/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:18: syntax error, unexpected <<, expecting '}'
+<<<<<<< HEAD
+  ^
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:19: syntax error, unexpected =>, expecting keyword_end
+        :subject     => "#{current_user}" + " has as...
+                       ^
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:19: syntax error, unexpected ',', expecting keyword_end
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:20: syntax error, unexpected ',', expecting keyword_end
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:22: syntax error, unexpected ',', expecting keyword_end
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:23: syntax error, unexpected ',', expecting keyword_end
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:25: syntax error, unexpected =>, expecting keyword_end
+        :via_options => {
+                       ^
+/Users/NathanielRuiz/Code/task_manager/app/models/task.rb:34: syntax error, unexpected '}', expecting keyword_end
+      })
+       ^):
+  app/controllers/tasks_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/NathanielRuiz/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/NathanielRuiz/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+  Rendered /Users/NathanielRuiz/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
