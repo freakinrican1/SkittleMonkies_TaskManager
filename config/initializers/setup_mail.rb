@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings = {
     port:                 587,
     domain:               'example.com',
     user_name:            'skittlemonkey2000',
-    password:             'tastetherainbow',
+    password:             ENV['mailer_pswd'],
     authentication:       'plain',
     enable_starttls_auto: true  }
   

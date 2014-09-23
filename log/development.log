@@ -10972,3 +10972,226 @@ Served asset /projects.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-23 10:16:46 -0500
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (3.3ms)
+
+Sent mail to skittlemonkey2000@gmail.com (960.3ms)
+Date: Tue, 23 Sep 2014 10:29:20 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <542191d085368_1c833fd7b8c65be0294c8@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (4.0ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2079.7ms)
+Date: Tue, 23 Sep 2014 10:31:53 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <542192696215_22333fe1a1465bf0374@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (2.8ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2613.1ms)
+Date: Tue, 23 Sep 2014 10:32:26 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <5421928aac94d_23e23fc650865be03484d@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (2.9ms)
+
+Sent mail to skittlemonkey2000@gmail.com (1067.6ms)
+Date: Tue, 23 Sep 2014 10:35:23 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <5421933bd637a_2a6a3fd798865bf05153d@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (3.3ms)
+
+Sent mail to skittlemonkey2000@gmail.com (1366.8ms)
+Date: Tue, 23 Sep 2014 10:37:56 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <542193d45bfc3_2fd63fda11465bec190a6@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  Rendered user_mailer/test_email.html.erb (4.5ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2453.1ms)
+Date: Tue, 23 Sep 2014 10:39:40 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <5421943ce9d3_33d63fcc91065bec784c5@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+  Rendered user_mailer/test_email.html.erb (0.4ms)
+
+Sent mail to skittlemonkey2000@gmail.com (2396.5ms)
+Date: Tue, 23 Sep 2014 10:39:45 -0500
+from: ENV[mailer_email]
+To: skittlemonkey2000@gmail.com
+Message-ID: <542194419bd0e_33d63fcc91065bec785a6@nathaniruizsmbp.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Skittle Monkey Task Manager, HIYA</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: HIYA.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: /login.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
