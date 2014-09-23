@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 <head>
   <title>TaskManager</title>
@@ -18,9 +18,9 @@
       
         <div id="nav">	
       		<ul>
-      			<li>Home</li>
-        		<li>About</li>
-      			<li>Contact</li>
+      			<li><a href = "#">Home</li>
+        		<li><a href = "#">About</li>
+      			<li><a href = "#">Contact</li>
 				<% if current_user == nil%>
 		  	  		<li><%= link_to("Signup", signup_path) %></li>
 				<% else %>

@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      UserMailer.test_email(@user)
       session[:user_id] = @user.id
       redirect_to tasks_path
     else
